@@ -7,17 +7,30 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Login from "./pages/Login";
 import Notfound from "./pages/Notfound";
+import instance from "./axios";
 
 function App() {
 	const [products, setProducts] = useState([]);
+	// useEffect(() => {
+	// 	fetch("http://localhost:3000/products")
+	// 		.then((response) => response.json())
+	// 		.then((data) => {
+	// 			console.log(data);
+	// 			setProducts(data);
+	// 		})
+	// 		.catch((error) => console.log(error));
+	// }, []);
+
 	useEffect(() => {
-		fetch("http://localhost:3000/products")
-			.then((response) => response.json())
-			.then((data) => {
+		(async () => {
+			try {
+				const { data } = await instance.get("/products");
 				console.log(data);
 				setProducts(data);
-			})
-			.catch((error) => console.log(error));
+			} catch (error) {
+				console.log(error);
+			}
+		})();
 	}, []);
 	return (
 		<>
