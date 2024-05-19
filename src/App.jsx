@@ -1,29 +1,39 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import NotFoundPage from "./pages/NotFoundPage";
-import { Route, Routes } from "react-router-dom";
-import HomePage from "./pages/HomePage";
-import AboutPage from "./pages/AboutPage";
-import LoginPage from "./pages/LoginPage";
+import { Navigate, Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Login from "./pages/Login";
+import Notfound from "./pages/Notfound";
 
 function App() {
-  return (
-    <>
-      <Header />
-      <main>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/home" redirect="/" />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/login" element={<LoginPage />} />
-          <Route path="*" element={<NotFoundPage />} />
-        </Routes>
-      </main>
-      <Footer />
-    </>
-  );
+	const [products, setProducts] = useState([]);
+	useEffect(() => {
+		fetch("http://localhost:3000/products")
+			.then((response) => response.json())
+			.then((data) => {
+				console.log(data);
+				setProducts(data);
+			})
+			.catch((error) => console.log(error));
+	}, []);
+	return (
+		<>
+			<Header />
+			<main>
+				<Routes>
+					<Route path="/" element={<Home data={products} />} />
+					<Route path="/home" element={<Navigate to="/" />} />
+					<Route path="/about" element={<About />} />
+					<Route path="/login" element={<Login />} />
+					<Route path="*" element={<Notfound />} />
+				</Routes>
+			</main>
+			<Footer />
+		</>
+	);
 }
 
 export default App;
