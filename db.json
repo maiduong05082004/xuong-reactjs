@@ -1,4 +1,128 @@
 {
+  "brand": [
+    {
+      "id": 1,
+      "name": "Apple"
+    },
+    {
+      "id": 2,
+      "name": "Samsung"
+    },
+    {
+      "id": 3,
+      "name": "OPPO"
+    },
+    {
+      "id": 4,
+      "name": "Huawei"
+    },
+    {
+      "id": 5,
+      "name": "Microsoft Surface"
+    },
+    {
+      "id": 6,
+      "name": "Infinix"
+    },
+    {
+      "id": 7,
+      "name": "HP Pavilion"
+    },
+    {
+      "id": 8,
+      "name": "Impression of Acqua Di Gio"
+    },
+    {
+      "id": 9,
+      "name": "Royal_Mirage"
+    },
+    {
+      "id": 10,
+      "name": "Fog Scent Xpressio"
+    },
+    {
+      "id": 11,
+      "name": "Al Munakh"
+    },
+    {
+      "id": 12,
+      "name": "Lord - Al-Rehab"
+    },
+    {
+      "id": 13,
+      "name": "L'Oreal Paris"
+    },
+    {
+      "id": 14,
+      "name": "Hemani Tea"
+    },
+    {
+      "id": 15,
+      "name": "Dermive"
+    },
+    {
+      "id": 16,
+      "name": "ROREC White Rice"
+    },
+    {
+      "id": 17,
+      "name": "Fair & Clear"
+    },
+    {
+      "id": 18,
+      "name": "Saaf & Khaas"
+    },
+    {
+      "id": 19,
+      "name": "Bake Parlor Big"
+    },
+    {
+      "id": 20,
+      "name": "Baking Food Items"
+    },
+    {
+      "id": 21,
+      "name": "fauji"
+    },
+    {
+      "id": 22,
+      "name": "Dry Rose"
+    },
+    {
+      "id": 23,
+      "name": "Boho Decor"
+    },
+    {
+      "id": 24,
+      "name": "Flying Wooden"
+    }
+  ],
+  "category": [
+    {
+      "id": 1,
+      "name": "smartphones"
+    },
+    {
+      "id": 2,
+      "name": "laptops"
+    },
+    {
+      "id": 3,
+      "name": "fragrances"
+    },
+    {
+      "id": 4,
+      "name": "skincare"
+    },
+    {
+      "id": 5,
+      "name": "groceries"
+    },
+    {
+      "id": 6,
+      "name": "home-decoration"
+    }
+  ],
   "products": [
     {
       "id": 1,
@@ -6,8 +130,8 @@
       "description": "An apple mobile which is nothing like apple",
       "price": 549,
       "discountPercentage": 12.96,
-      "rating": 4.69,
-      "stock": 94,
+      "rating": "469",
+      "stock": 9421,
       "brand": "Apple",
       "category": "smartphones",
       "thumbnail": "https://cdn.dummyjson.com/product-images/1/thumbnail.jpg",
@@ -25,8 +149,8 @@
       "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
       "price": 899,
       "discountPercentage": 17.94,
-      "rating": 4.44,
-      "stock": 34,
+      "rating": 5,
+      "stock": 345,
       "brand": "Apple",
       "category": "smartphones",
       "thumbnail": "https://cdn.dummyjson.com/product-images/2/thumbnail.jpg",
@@ -44,7 +168,7 @@
       "price": 1249,
       "discountPercentage": 15.46,
       "rating": 4.09,
-      "stock": 36,
+      "stock": 362,
       "brand": "Samsung",
       "category": "smartphones",
       "thumbnail": "https://cdn.dummyjson.com/product-images/3/thumbnail.jpg",
@@ -553,10 +677,46 @@
       ]
     },
     {
-      "title": "ccvrẻ4232",
-      "price": 3,
-      "description": "3",
-      "id": 31
+      "title": "dsdssds",
+      "description": "Original Al Munakh® by Mahal Al Musk | Our Impression of Climate | 6ml Non-Alcoholic Concentrated Perfume Oil",
+      "price": 32,
+      "stock": 1212,
+      "id": 33,
+      "rating": 4.2
+    },
+    {
+      "title": "fdfdfdf",
+      "description": "232",
+      "price": 32,
+      "rating": 7.2,
+      "stock": 232,
+      "id": 34
+    },
+    {
+      "title": "cxxcxc",
+      "description": "Original Al Munakh® by Mahal Al Musk | Our Impression of Climate | 6ml Non-Alcoholic Concentrated Perfume Oil",
+      "price": 32,
+      "rating": 7,
+      "stock": 122,
+      "id": 35
+    },
+    {
+      "title": "vccvcv",
+      "description": "1111",
+      "price": 32,
+      "rating": 11,
+      "stock": 111,
+      "brand": "14",
+      "id": 38
+    },
+    {
+      "title": "cxcxcxc",
+      "description": "Original Al Munakh® by Mahal Al Musk | Our Impression of Climate | 6ml Non-Alcoholic Concentrated Perfume Oil",
+      "price": 32,
+      "rating": 11.1,
+      "stock": 1212,
+      "brand": "Huawei",
+      "id": 39
     }
   ]
 }

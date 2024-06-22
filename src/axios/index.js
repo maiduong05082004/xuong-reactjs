@@ -16,4 +16,5 @@ export const getProducts = async () => {
 		console.log(error);
 	}
 };
+
 export default instance;

@@ -1,13 +1,12 @@
+import * as z from "zod";
+
 const productSchema = z.object({
-    id: z.number(),
-    title: z.string(),
-    description: z.string(),
-    price: z.number(),
-    discountPercentage: z.number(),
-    rating: z.number(),
-    stock: z.number(),
+	title: z.string().min(5).max(100),
+    description: z.string().optional(),
+	price: z.number().min(0),
+    rating: z.number().positive(), 
+	stock: z.number(),
     brand: z.string(),
-    category: z.string(),
-    thumbnail: z.string(),
-    images: z.array(z.string()), 
+    // category: z.string(),
 });
+export default productSchema;
