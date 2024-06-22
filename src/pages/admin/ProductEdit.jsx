@@ -21,7 +21,7 @@ const ProductEdit = ({ onEdit }) => {
             try {
                 const { data } = await instance.get(`/products/${id}`);
                 reset(data);
-                setSelectedBrand(data.brand); // Set selected brand from product data
+                setSelectedBrand(data.brand);
             } catch (error) {
                 console.log(error);
             }
