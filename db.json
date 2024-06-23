@@ -1,5 +1,5 @@
 {
-  "brand": [
+  "brands": [
     {
       "id": 1,
       "name": "Apple"
@@ -97,7 +97,7 @@
       "name": "Flying Wooden"
     }
   ],
-  "category": [
+  "categorys": [
     {
       "id": 1,
       "name": "smartphones"
@@ -726,6 +726,43 @@
       "stock": 1212,
       "brand": "Apple",
       "id": 40
+    }
+  ],
+  "users": [
+    {
+      "email": "admin@example.com",
+      "password": "$2a$10$BGqQ9fSuIL/RfjUJcD1gfu0FZraDVT9xbnzKjhjqdJABNjYwDCqVy",
+      "id": 1
+    },
+    {
+      "email": "admivn@example.com",
+      "password": "$2a$10$kPBKTtox85uTBWQP6teSS.SwxZ8XjO.aikQqZjVSqksRaufZlNd0C",
+      "id": 2
+    },
+    {
+      "email": "admin12@example.com",
+      "password": "$2a$10$IqOM1fEZpZ4VEjr5v6ecxOHn4z6DVlxK88/y5N6ZOGzYWhZm4kO9S",
+      "id": 3
+    },
+    {
+      "email": "admin123@example.com",
+      "password": "$2a$10$Cja4KI4hc3M9z44A/kVr8eRjl562TgnKpBV5NBjvdJTc2nv/B5mNW",
+      "id": 4
+    },
+    {
+      "email": "admin555@example.com",
+      "password": "$2a$10$N8jpJL0lAN0/C8SSh18tMOCJgS28RXTPQA/HYlh.hcXkE9Futqm4q",
+      "id": 5
+    },
+    {
+      "email": "maiduong2004@example.com",
+      "password": "$2a$10$rsYfZw8MDkkcRyUc/OLoMeORTNUm21MOrtdBabC6fZR7XSVARpx56",
+      "id": 6
+    },
+    {
+      "email": "hihi@example.com",
+      "password": "$2a$10$h9LG/.C2PDR0CTJhrv7LReaiLXu5kvHD1ixkt6DHsukXkMXxdZjmO",
+      "id": 7
     }
   ]
 }

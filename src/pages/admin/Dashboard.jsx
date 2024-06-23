@@ -6,7 +6,7 @@ const Dashboard = ({ data }) => {
     return (
         <div>
             <h1>Hello, admin</h1>
-            <Link to="/admin/product-form" className="btn btn-primary">
+            <Link to="/admin/product-form" className="btn btn-primary m-3 float-end">
                 Add new product
             </Link>
             <table className="table table-bordered table-striped text-center">

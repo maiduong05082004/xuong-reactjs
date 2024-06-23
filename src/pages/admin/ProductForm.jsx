@@ -31,7 +31,7 @@ const ProductForm = ({ onProduct }) => {
 	useEffect(() => {
         const fetchBrands = async () => {
             try {
-                const { data } = await instance.get(`/brand`);
+                const { data } = await instance.get(`/brands`);
                 setBrands(data);
             } catch (error) {
                 console.error("Error fetching brands: ", error);
