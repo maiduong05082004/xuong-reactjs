@@ -1,7 +1,7 @@
 import React from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
-import authSchema from "../schemaValid/authSchema";
+import {registerSchema} from "../schemaValid/authSchema";
 import instance from "../axios";
 import { useNavigate } from "react-router-dom";
 
@@ -12,7 +12,7 @@ const Register = () => {
         handleSubmit,
         formState: { errors },
     } = useForm({
-        resolver: zodResolver(authSchema),
+        resolver: zodResolver(registerSchema),
     });
 
     const onSubmit = (data) => {
@@ -31,6 +31,13 @@ const Register = () => {
         <div>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <h1>Register</h1>
+                <div className="mb-3">
+                    <label htmlFor="name" className="form-label">
+                        Name
+                    </label>
+                    <input type="text" className="form-control" id="name" {...register("name", { required: true })} />
+                    {errors.name?.message && <p className="text-danger">{errors.name?.message.toString()}</p>}
+                </div>
                 <div className="mb-3">
                     <label htmlFor="email" className="form-label">
                         Email
