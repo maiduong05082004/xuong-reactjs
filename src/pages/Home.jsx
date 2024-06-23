@@ -1,23 +1,26 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import ProductItem from "../components/customs/ProductItem";
 
 function Home({ data }) {
 	return (
 		<>
 			<h1>Danh sach san pham</h1>
-			{data.map((product) => (
-				<div key={product.id} className="card">
-					<Link to={`/product-detail/${product.id}`}>
-						<img src={product.thumbnail} alt="" />
-					</Link>
-					<Link to={`/product-detail/${product.id}`}>
-						<h2>{product.title}</h2>
-					</Link>
-					<p>${product.price}</p>
-					<p>{product.description}</p>
-					<button className="btn btn-danger">Add to cart</button>
+			<main class="col-md-10 m-auto">
+				<div class="row">
+					{data.map((product) => (
+						<ProductItem data={product} />
+					))}
+					<nav class="mt-4" aria-label="Page navigation sample">
+						<ul class="pagination">
+							<li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+							<li class="page-item active"><a class="page-link" href="#">1</a></li>
+							<li class="page-item"><a class="page-link" href="#">2</a></li>
+							<li class="page-item"><a class="page-link" href="#">3</a></li>
+							<li class="page-item"><a class="page-link" href="#">Next</a></li>
+						</ul>
+					</nav>
 				</div>
-			))}
+			</main>
 		</>
 	);
 }
