@@ -1,6 +1,8 @@
+import React from "react";
 import { Link } from "react-router-dom";
 
-export default function Header() {
+const Header = ({ user, onLogout }) => {
+  console.log(user);
   return (
     <header>
       <ul>
@@ -13,13 +15,26 @@ export default function Header() {
         <li>
           <Link to="/products">Shop</Link>
         </li>
-        <li>
-          <Link to="/login">Login</Link>
-        </li>
-        <li>
-          <Link to="/register">Register</Link>
-        </li>
+        {!user ? (
+          <>
+            <li>
+              <Link to="/login">Login</Link>
+            </li>
+            <li>
+              <Link to="/register">Register</Link>
+            </li>
+          </>
+        ) : (
+          <>
+            <li>Welcome, {user.name}</li>
+            <li>
+              <button onClick={onLogout}>Logout</button>
+            </li>
+          </>
+        )}
       </ul>
     </header>
   );
-}
+};
+
+export default Header;

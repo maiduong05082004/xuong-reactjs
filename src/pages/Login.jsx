@@ -1,11 +1,11 @@
 import React from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
-import {loginSchema} from "../schemaValid/authSchema";
+import { loginSchema } from "../schemaValid/authSchema";
 import instance from "../axios";
 import { useNavigate } from "react-router-dom";
 
-const Login = () => {
+const Login = ({ setUser }) => {
   const nav = useNavigate();
   const {
     register,
@@ -15,18 +15,19 @@ const Login = () => {
     resolver: zodResolver(loginSchema),
   });
 
-  const onSubmit = (data) => {
-    (async () => {
-      try {
-        await instance.post(`/login`, data);
-        if (confirm("Login success,reback home now")) {
-          nav(`/home`);
-        }
-      } catch (error) {
-        console.log(error);
+  const onSubmit = async (data) => {
+    try {
+      const res = await instance.post(`/login`, data);
+      localStorage.setItem("user", JSON.stringify(res.data));
+      setUser(res.data);
+      if (confirm("Login success, redirect to home now")) {
+        nav(`/home`);
       }
-    })();
+    } catch (error) {
+      console.log(error);
+    }
   };
+
   return (
     <div>
       <form onSubmit={handleSubmit(onSubmit)}>

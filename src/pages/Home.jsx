@@ -5,18 +5,18 @@ function Home({ data }) {
 	return (
 		<>
 			<h1>Danh sach san pham</h1>
-			<main class="col-md-10 m-auto">
-				<div class="row">
+			<main className="col-md-10 m-auto">
+				<div className="row">
 					{data.map((product) => (
-						<ProductItem data={product} />
+						<ProductItem key={product.id} data={product} />
 					))}
-					<nav class="mt-4" aria-label="Page navigation sample">
-						<ul class="pagination">
-							<li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
-							<li class="page-item active"><a class="page-link" href="#">1</a></li>
-							<li class="page-item"><a class="page-link" href="#">2</a></li>
-							<li class="page-item"><a class="page-link" href="#">3</a></li>
-							<li class="page-item"><a class="page-link" href="#">Next</a></li>
+					<nav className="mt-4" aria-label="Page navigation sample">
+						<ul className="pagination">
+							<li className="page-item disabled"><a className="page-link" href="#">Previous</a></li>
+							<li className="page-item active"><a className="page-link" href="#">1</a></li>
+							<li className="page-item"><a className="page-link" href="#">2</a></li>
+							<li className="page-item"><a className="page-link" href="#">3</a></li>
+							<li className="page-item"><a className="page-link" href="#">Next</a></li>
 						</ul>
 					</nav>
 				</div>

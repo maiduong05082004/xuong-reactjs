@@ -689,6 +689,12 @@
       "password": "$2a$10$03sDT32zrKz1NYQ3Jus13OBxSKFQ/8IzvlcCg7Gs1nMKU6jvGr2Gi",
       "name": "mai duong",
       "id": 2
+    },
+    {
+      "email": "admin1211@example.com",
+      "password": "$2a$10$gaeF.whQNsfDmgUf7Sj.mOBUcQOLtJuZTxKpolkkw33gJ5VWpViQa",
+      "name": "ghdfgdf",
+      "id": 3
     }
   ]
 }
