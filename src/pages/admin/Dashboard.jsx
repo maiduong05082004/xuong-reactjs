@@ -1,8 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Dashboard = ({ data }) => {
-    console.log(data);
+const Dashboard = ({ data, onDelete }) => {
+    const handleDelete = (id) => {
+        if (window.confirm("Bạn có chắc chắn muốn xóa sản phẩm này không?")) {
+            onDelete(id);
+        }
+    };
+
     return (
         <div>
             <h1>Hello, admin</h1>
@@ -35,7 +40,12 @@ const Dashboard = ({ data }) => {
                             <td>{p.brand || "Đang cập nhật"}</td>
                             <td>{p.thumbnail ? <img src={p.thumbnail} alt="Đang cập nhật" /> : "Đang cập nhật"}</td>
                             <td>
-                                <button className="btn btn-danger">Delete</button>
+                                <button
+                                    className="btn btn-danger"
+                                    onClick={() => handleDelete(p.id)}
+                                >
+                                    Delete
+                                </button>
                                 <Link to={`/admin/product-form/${p.id}`} className="btn btn-warning">
                                     Edit
                                 </Link>

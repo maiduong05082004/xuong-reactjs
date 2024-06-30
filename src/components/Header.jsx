@@ -2,33 +2,32 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Header = ({ user, onLogout }) => {
-  console.log(user);
   return (
     <header>
       <ul>
         <li>
-          <Link to="/">Home</Link>
+          <Link to="/" className="no-underline">Home</Link>
         </li>
         <li>
-          <Link to="/about">About</Link>
+          <Link to="/about" className="no-underline">About</Link>
         </li>
         <li>
-          <Link to="/products">Shop</Link>
+          <Link to="/products" className="no-underline">Shop</Link>
         </li>
         {!user ? (
           <>
             <li>
-              <Link to="/login">Login</Link>
+              <Link to="/login" className="no-underline">Login</Link>
             </li>
             <li>
-              <Link to="/register">Register</Link>
+              <Link to="/register" className="no-underline">Register</Link>
             </li>
           </>
         ) : (
           <>
-            <li>Welcome, {user.name}</li>
+            <li className="text-white">Welcome, {user.name}</li>
             <li>
-              <button onClick={onLogout}>Logout</button>
+              <button className="text-white" onClick={onLogout}>Logout</button>
             </li>
           </>
         )}

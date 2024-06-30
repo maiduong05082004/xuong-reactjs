@@ -6,7 +6,7 @@ import instance from "../axios";
 import { useNavigate } from "react-router-dom";
 
 const Login = ({ setUser }) => {
-  const nav = useNavigate();
+  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
@@ -19,12 +19,12 @@ const Login = ({ setUser }) => {
     try {
       const res = await instance.post(`/login`, data);
       localStorage.setItem("user", JSON.stringify(res.data));
-      setUser(res.data);
-      if (confirm("Login success, redirect to home now")) {
-        nav(`/home`);
+      setUser(res.data.user);
+      if (window.confirm("Login success, redirect to home now")) {
+        navigate(`/`);
       }
     } catch (error) {
-      console.log(error);
+      console.error(error);
     }
   };
 
@@ -52,7 +52,7 @@ const Login = ({ setUser }) => {
           </label>
           <input
             type="password"
-            className="form-control"
+            className="form-control" 
             id="password"
             {...register("password", { required: true })}
           />
@@ -60,7 +60,6 @@ const Login = ({ setUser }) => {
             <p className="text-danger">{errors.password?.message.toString()}</p>
           )}
         </div>
-
         <div className="mb-3">
           <button className="btn btn-primary w-100" type="submit">
             Login

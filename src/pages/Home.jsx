@@ -4,6 +4,7 @@ import ProductItem from "../components/customs/ProductItem";
 function Home({ data }) {
 	return (
 		<>
+		
 			<h1>Danh sach san pham</h1>
 			<main className="col-md-10 m-auto">
 				<div className="row">
