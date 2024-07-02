@@ -71,12 +71,10 @@ function App() {
           <Route path="/login" element={<Login setUser={setUser} />} />
           <Route path="/register" element={<Register />} />
           <Route element={<PrivateRoute />}>
-            {/* <Route path="/admin" element={<AdminRoute />}> */}
               <Route path="/admin" element={<Dashboard data={products} />} />
               <Route path="/admin/product-form" element={<ProductForm onProduct={handleSubmitForm} />} />
               <Route path="/admin/product-form/:id" element={<ProductForm onProduct={handleSubmitForm} />} />
             </Route>
-          {/* </Route> */}
           <Route path="*" element={<Notfound />} />
         </Routes>
       </main>
