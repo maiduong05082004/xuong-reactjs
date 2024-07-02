@@ -38,7 +38,7 @@ const Dashboard = ({ data, onDelete }) => {
                             <td>{p.stock || "Đang cập nhật"}</td>
                             <td>{p.rating || "Đang cập nhật"}</td>
                             <td>{p.brand || "Đang cập nhật"}</td>
-                            <td>{p.thumbnail ? <img src={p.thumbnail} alt="Đang cập nhật" /> : "Đang cập nhật"}</td>
+                            <td>{p.thumbnail ? <img src={p.thumbnail} alt="Đang cập nhật" width={333}/> : "Đang cập nhật"}</td>
                             <td>
                                 <button
                                     className="btn btn-danger"

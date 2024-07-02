@@ -12,6 +12,7 @@ import ProductDetail from "./pages/ProductDetail";
 import Register from "./pages/Register";
 import Dashboard from "./pages/admin/Dashboard";
 import ProductForm from "./pages/admin/ProductForm";
+import PrivateRoute from "./components/PrivateRoute";
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -58,15 +59,6 @@ function App() {
     }
   };
 
-  const handleDeleteProduct = async (id) => {
-    try {
-      await instance.delete(`/products/${id}`);
-      setProducts(products.filter(product => product.id !== id));
-    } catch (error) {
-      console.error(error);
-    }
-  };
-
   return (
     <>
       <Header user={user} onLogout={handleLogout} />
@@ -78,9 +70,13 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/login" element={<Login setUser={setUser} />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/admin" element={<Dashboard data={products} onDelete={handleDeleteProduct} />} />
-          <Route path="/admin/product-form" element={<ProductForm onProduct={handleSubmitForm} />} />
-          <Route path="/admin/product-form/:id" element={<ProductForm onProduct={handleSubmitForm} />} />
+          <Route element={<PrivateRoute />}>
+            {/* <Route path="/admin" element={<AdminRoute />}> */}
+              <Route path="/admin" element={<Dashboard data={products} />} />
+              <Route path="/admin/product-form" element={<ProductForm onProduct={handleSubmitForm} />} />
+              <Route path="/admin/product-form/:id" element={<ProductForm onProduct={handleSubmitForm} />} />
+            </Route>
+          {/* </Route> */}
           <Route path="*" element={<Notfound />} />
         </Routes>
       </main>

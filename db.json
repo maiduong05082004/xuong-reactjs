@@ -134,7 +134,7 @@
       "stock": 9421,
       "brand": "Apple",
       "category": "smartphones",
-      "thumbnail": "https://cdn.dummyjson.com/product-images/1/thumbnail.jpg",
+      "thumbnail": "https://static.digit.in/vivo-feature-image-periscope.jpg",
       "images": [
         "https://cdn.dummyjson.com/product-images/1/1.jpg",
         "https://cdn.dummyjson.com/product-images/1/2.jpg",
@@ -153,7 +153,7 @@
       "stock": 345,
       "brand": "Apple",
       "category": "smartphones",
-      "thumbnail": "https://cdn.dummyjson.com/product-images/2/thumbnail.jpg",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGKVJIXxZcevkwulAt_4bMrMPs6wTEzM8D4fTfs7rnkObQPnNvOvIk-PcTAqZ127VWZuo&usqp=CAU",
       "images": [
         "https://cdn.dummyjson.com/product-images/2/1.jpg",
         "https://cdn.dummyjson.com/product-images/2/2.jpg",
@@ -682,19 +682,29 @@
       "email": "admin@example.com",
       "password": "$2a$10$BGqQ9fSuIL/RfjUJcD1gfu0FZraDVT9xbnzKjhjqdJABNjYwDCqVy",
       "name": "mai",
+      "role": "admin",
       "id": 1
     },
     {
       "email": "admin121@example.com",
       "password": "$2a$10$03sDT32zrKz1NYQ3Jus13OBxSKFQ/8IzvlcCg7Gs1nMKU6jvGr2Gi",
       "name": "mai duong",
+      "role": "admin",
       "id": 2
     },
     {
       "email": "admin1211@example.com",
       "password": "$2a$10$gaeF.whQNsfDmgUf7Sj.mOBUcQOLtJuZTxKpolkkw33gJ5VWpViQa",
       "name": "ghdfgdf",
+      "role": "user",
       "id": 3
+    },
+    {
+      "email": "admin12121212@example.com",
+      "password": "$2a$10$KvW/W7di2.MXjlAYzo3szeq3asM.ws.3H/Ii4sSZan3sPWQH3Cfgu",
+      "name": "mai duong",
+      "role": "user",
+      "id": 5
     }
   ]
 }
